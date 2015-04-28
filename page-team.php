@@ -27,7 +27,7 @@ get_header(); ?>
 
 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12	">
 								<h2><?php the_title(); ?></h2>
-								<?php the_post_thumbnail('thumbnail', array('class' => 'img-circle'));?>
+								<?php the_post_thumbnail('thumbnail', array('class' => 'img-responsive alignleft'));?>
 									
 									<?php the_content(); ?>
 								</div>
