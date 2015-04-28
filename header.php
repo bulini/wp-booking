@@ -25,16 +25,15 @@ $options=load_theme_options();
     <nav class="navbar navbar-<?php echo $options['navbar_select'];?> navbar-fixed-top" role="navigation">
 		<div class="container transparent">
             <div class="navbar-header">
-            <a href="<?php bloginfo('siteurl'); ?>" id="sitetitle" ><img src="<?php LogoImage(); ?>" style="margin-top:6px; width:180px;" alt="<?php bloginfo('name'); ?>"/></a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navcat">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-
+				<a class="navbar-brand" href="<?php bloginfo('siteurl'); ?>"><img src="<?php LogoImage(); ?>" class="img-responsive" style="max-width:200px;" /></a>
             </div>
-             <div class="collapse navbar-collapse" id="navcat">
+             <div class="collapse navbar-collapse" id="navcat" style="margin-top:15px;">
 				<?php 
 					$args = array(
 					'theme_location'  => '',
