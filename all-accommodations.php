@@ -39,7 +39,7 @@ $options=load_theme_options();
 							
 							<!-- COUNTRY ITEM-->
 							<div class="row margin-top-10 hov-action-border">
-								<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 									<div class="thumbnail">
 								<!-- SLIDER -->
 		
@@ -48,7 +48,7 @@ $options=load_theme_options();
 										  		<?php
 										  		$attachments=OneGallery($post->ID);
 										  		
-										  		foreach ($attachments as $attachment) { $img=wp_get_attachment_image_src($attachment->ID, 'medium', false); ?>
+										  		foreach ($attachments as $attachment) { $img=wp_get_attachment_image_src($attachment->ID, 'homepage-thumb', false); ?>
 										  			<li data-thumb="<?php echo $img[0]; ?>"><img src="<?php echo $img[0]; ?>"></li>
 										  		<?php } ?>
 										  </ul>
@@ -58,7 +58,7 @@ $options=load_theme_options();
 										
 									</div>
 								</div>
-								<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+								<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 									<h4><a href="<?php the_permalink(); ?>" title=""><?php the_title(); ?></a></h4>
 									
 										<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" style="padding-left:0px;">

@@ -191,7 +191,7 @@ add_theme_support( 'post-thumbnails' );
 
 
 if ( function_exists( 'add_image_size' ) ) { 
-	add_image_size( 'homepage-thumb', 360, 120, true ); // (ritagliata)
+	add_image_size( 'homepage-thumb', 320, 240, true ); // (ritagliata)
 	//add_image_size( 'category-thumb', 300, 9999 ); //300 pixels wide (and unlimited height)
 	add_image_size( 'homepage-slider', 900, 300, true ); //(cropped)
 	add_image_size( 'slider-crop', 900, 450, true ); //(cropped)
