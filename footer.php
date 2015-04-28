@@ -86,8 +86,8 @@
 				 ?>
 				{
 					title: '<?php echo $booking->payment_status ?> <?php echo $booking->contactsurname ?> <?php echo $booking->contactname ?> <?php echo $booking->total_price; ?> <?php echo $booking->notes; ?>',
-					start: new Date(2014, <?php echo $booking_engine->date_from_mysql($booking->checkin,'m')-1; ?>, <?php echo $booking_engine->date_from_mysql($booking->checkin,'d'); ?>),
-					end: new Date(2014, <?php echo $booking_engine->date_from_mysql($booking->checkout,'m')-1; ?>, <?php echo $booking_engine->date_from_mysql($booking->checkout,'d')-1; ?>)				
+					start: new Date(2015, <?php echo $booking_engine->date_from_mysql($booking->checkin,'m')-1; ?>, <?php echo $booking_engine->date_from_mysql($booking->checkin,'d'); ?>),
+					end: new Date(2015, <?php echo $booking_engine->date_from_mysql($booking->checkout,'m')-1; ?>, <?php echo $booking_engine->date_from_mysql($booking->checkout,'d')-1; ?>)				
 
 				},				
 				<?php endforeach;
