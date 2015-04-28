@@ -1,6 +1,7 @@
 <?php 
 $options=load_theme_options();
 ?>
+
 <ul id="myTab" class="nav nav-tabs">
 	<li class="active"><a href="#mappa" data-toggle="tab">Vacanze</a></li>
 	<li><a href="#zone" data-toggle="tab">Localit&agrave;</a></li>
@@ -27,8 +28,9 @@ $options=load_theme_options();
 		<div class="row hov-action-border ">
 	
 			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-				<h3><a href="<?php echo get_term_link( $term ); ?>" title=""><?php echo $term->name; ?></a> <small>B & B - Guesthouses</small></h3>
+				<h3><a href="<?php echo get_term_link( $term ); ?>" title=""><?php echo $term->name; ?></a> <small></small></h3>
 				<p><?php echo term_description($term->term_id,'areas');?></p>
+				<?php echo get_types(); ?>
 			</div>
 			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-left">
 				<a class="btn btn-link" href="#" title="go" style="margin-top:20px;"><i class="icon-angle-right icon-3x text-info"></i></a>

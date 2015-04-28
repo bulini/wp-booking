@@ -81,7 +81,7 @@ $options=load_theme_options();
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="thumbnail">
 									<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/images/rome9.jpg" alt="">
-									<div class="caption alt"><p class="lead">Affitta il tuo B&B</p></div>
+									<div class="caption alt"><p class="lead"><a href="http://www.acrossrome.com">Rome tour</a></p></div>
 
 								
 								</div>
@@ -99,14 +99,10 @@ $options=load_theme_options();
 							<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
 								<div class="thumbnail">
 									<img class="img-responsive" src="<?php bloginfo('template_url'); ?>/images/amster.jpg" alt="">
-									<div class="caption alt"><p class="lead">Prenota un B&B</p></div>
-
-									
-								</div>
-								
+									<div class="caption alt"><p class="lead"><a href="http://www.amsterdamrentapartments.com">Amsterdam</a></p></div>
+								</div>								
 							</div>
-							<!-- /COUNTRY ITEM -->
-					</div>
+							<!-- /COUNTRY ITEM -->					</div>
 		
 							
 

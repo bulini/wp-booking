@@ -50,7 +50,19 @@ function Services($id)
 <?php
 }
 
-
+function get_types()
+{
+$terms = get_terms( 'types' );
+ if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+     $types.= '<ul class="list-inline">';
+     foreach ( $terms as $term ) {
+       $types.= '<li>' . $term->name . '</li>';
+        
+     }
+     $types.= '</ul>';
+ }
+return $types;
+}
 
 function ThumbGallery($id,$size,$limit='')
 {
