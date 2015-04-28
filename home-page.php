@@ -17,7 +17,7 @@ $options=load_theme_options();
 			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">			
 						<div class="panel panel-default margin-top-10">
 							<div class="panel-heading">
-								<h1><?php the_title(); ?></h1>
+								<h2><?php the_title(); ?></h2>
 							</div>
 						</div>
 												
@@ -44,10 +44,10 @@ $options=load_theme_options();
 							
 							<!-- COUNTRY ITEM-->
 							<div class="row margin-top-10 hov-action-border">
-								<div class="col-xs-2 col-sm-4 col-md-4 col-lg-4">
-									<div class="thumbnail"><?php the_post_thumbnail();?></div>
+								<div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+									<div class="thumbnail"><?php the_post_thumbnail('thumbnail');?></div>
 								</div>
-								<div class="col-xs-10 col-sm-8 col-md-8 col-lg-8">
+								<div class="col-xs-6 col-sm-8 col-md-8 col-lg-8">
 									<h4><a href="<?php the_permalink(); ?>" title=""><?php the_title(); ?></a></h4>
 									
 										<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding-left:0px;">

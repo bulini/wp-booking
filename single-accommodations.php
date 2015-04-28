@@ -26,7 +26,7 @@ $options=load_theme_options();
 	<div class="row">
 		<!-- Left side wrapper col  -->
 		<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-		<a class="" href="http://www.appartamenti-lefkada.com/appartamenti-hotel-studios/"><i class="icon-angle-left"></i> <strong>Tutti gli alloggi</strong></a>
+		<a class="" href="#"><i class="icon-angle-left"></i> <strong>Tutti</strong></a>
 		<hr class="hr-sm">
 			<div class="panel">
 				<div class="panel-heading">

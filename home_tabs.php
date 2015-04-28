@@ -2,15 +2,15 @@
 $options=load_theme_options();
 ?>
 <ul id="myTab" class="nav nav-tabs">
-	<li class="active"><a href="#mappa" data-toggle="tab">Find a place</a></li>
-	<li><a href="#zone" data-toggle="tab">Places</a></li>
+	<li class="active"><a href="#mappa" data-toggle="tab">Vacanze</a></li>
+	<li><a href="#zone" data-toggle="tab">Localit&agrave;</a></li>
 </ul>
 
   <div id="myTabContent" class="tab-content">
 	<div class="tab-pane fade in active" id="mappa">
 			<div class="row white">
 				<div class="col-md-12">
-					<h3>Suca</h3>				
+					<h3><?php bloginfo('description'); ?></h3>				
 				</div>
 			</div>												
 
