@@ -16,7 +16,7 @@ $options=load_theme_options();
 		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-right">
 			<a class="btn btn-lg btn-block btn-warning" data-toggle="modal" data-target="#myModal">Richiedi informazioni</a>
 			
-			<a  class="btn btn-info btn-block btn-lg toggler" href="#" style="margin:30px 0px 10px 0px;"> <i class="icon-map-marker"></i> Show map </a> <a  class="btn btn-info btn-lg btn-block toggler-hide" href="#" style="margin:30px 0px 10px 0px;"><i class="icon-map-marker"></i> Hide map </a>
+			<a  class="btn btn-primary btn-block btn-lg toggler" href="#" style="margin:30px 0px 10px 0px;"> <i class="icon-map-marker"></i> Show map </a> <a  class="btn btn-primary btn-lg btn-block toggler-hide" href="#" style="margin:30px 0px 10px 0px;"><i class="icon-map-marker"></i> Hide map </a>
 			
 		</div>
 	

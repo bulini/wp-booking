@@ -19,7 +19,7 @@
 	            <?php $max_pax=get_post_meta($post->ID,'bookandpay_maxpeople',true); ?>
 				<p class="lead">up to <?php echo $max_pax; ?> <i class="fa fa-user"></i><br />from  <?php echo get_post_meta($post->ID, "apartment-rate-1-".$max_pax, true); ?>&euro;</p>
 
-				<p><a href="<?php the_permalink(); ?>" class="btn-primary btn-lg">Prenota subito</a></p>
+				<p><a href="<?php the_permalink(); ?>" class="btn-warning btn-lg">Prenota subito</a></p>
           	</div>
 
         </div>
