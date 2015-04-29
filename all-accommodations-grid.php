@@ -29,7 +29,7 @@ $options=load_theme_options();
 
 							<hr class="hr-sm">
 							
-					<div class="row margin-top-10 hov-action-border">						
+					<div class="row margin-top-10">						
 							<?php query_posts('post_type=accommodations&posts_per_page=-1'); ?>
 							
 					<!-- ITEM-->
