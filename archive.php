@@ -18,7 +18,7 @@ $options=load_theme_options();
 	
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h4><i class="icon-search"></i> Search destinations</h4>
+								<h4><i class="icon-search"></i> <?php single_cat_title(); ?></h4>
 							</div>
 							<div class="panel-body">
 							<div class="row">
@@ -32,7 +32,7 @@ $options=load_theme_options();
 
 			<div class="panel panel-default margin-top-10">
 							<div class="panel-heading">
-								<h3><?php echo $options['city']; ?></h3>
+								<h3>Ville <?php echo $options['city']; ?></h3>
 							</div>
 						</div>
 
@@ -69,7 +69,7 @@ $options=load_theme_options();
 								<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 									<div class="panel panel-default">
 										<div class="panel-heading">
-											<h3>Bed and Breakfast <?php single_cat_title(); ?> <?php echo $options['city']; ?></h3>
+											<h3>Appartamenti ville e studios <?php single_cat_title(); ?> <?php echo $options['city']; ?></h3>
 										</div>
 									</div>
 								</div>
@@ -81,50 +81,34 @@ $options=load_theme_options();
 					<div class="panel panel-primary hov-action-border">
 						<div class="panel-body">
 							<div class="row">
-								<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 									<?php the_post_thumbnail('thumbnail');?>
 								</div>
-								<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 									<h3><a href="<?php the_permalink(); ?>" title=""><?php the_title(); ?></a> <small><?php echo $options['city']; ?></small></h3>
 									<ul class="list-inline">
 										<li><a href="#" title=""><?php echo get_post_meta( get_the_ID(), 'bookandpay_maxpeople', true); ?> persone</a></li>
-										<li><a href="#" title="">a partire da &euro; <?php echo get_post_meta( get_the_ID(), 'apartment-rate-1-3', true); ?></a></li>
+										<li><a href="<?php the_permalink(); ?>" title="">a partire da &euro; <?php echo get_post_meta( get_the_ID(), 'apartment-rate-1-3', true); ?></a></li>
 
 									</ul>
 
 								</div>
-								<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-left">
-									<a class="btn btn-link" href="#" title="go" style="margin-top:20px;"><i class="icon-angle-right icon-3x text-info"></i></a>
+								<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 text-left">
+									<a class="btn btn-link" href="<?php the_permalink(); ?>" title="go" style="margin-top:20px;"><i class="icon-angle-right icon-3x text-info"></i></a>
 								</div>
 							</div>
 						</div>
 					</div>
 					<!-- /ITEM-->
 					<?php endwhile; ?>
-		
-		
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<a class="btn btn-warning btn-sm" href="#" title="" style="margin-top:20px;"><i class="icon-angle-left"></i> Back to search results</a>
+		<!-- Pagination -->		
+		<div class="col-md-12">
+					<?php
+					if ( function_exists('wp_bootstrap_pagination') )
+						wp_bootstrap_pagination();
+					?>
 		</div>
-		<!-- Pagination -->
-		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-			<ul class="pagination pull-right">
-			  <li class="disabled"><a href="#">Previous</a></li>
-			  <li class="active"><a href="#">1</a></li>
-			  <li><a href="#">2</a></li>
-			  <li><a href="#">3</a></li>
-			  <li><a href="#">4</a></li>
-			  <li><a href="#">5</a></li>
-			  <li><a href="#">Next</a></li>
-			</ul>
-		</div>
-	  <!-- /Pagination -->
-					
-					
-					
-					
-						
-		</div>
+		<!-- /Pagination -->
 	</div>
 	<!-- /Main blog .container -->
     <!-- Marketing messaging and featurettes
@@ -135,5 +119,5 @@ $options=load_theme_options();
 <!-- /.container-->
 
 	<hr>
-	<?php get_template_part('pre-footer');?>  
+	<?php //get_template_part('pre-footer');?>  
 	<?php get_footer(); ?>

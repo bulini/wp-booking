@@ -7,6 +7,15 @@ include('libs/metaboxes/accommodation.php');
 include('libs/theme-customization.php');
 include('libs/theme-init.php');
 
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Custom template tags for this theme.
+ */
+require get_template_directory() . '/inc/wp-bootstrap-pagination.php';
 
 function get_topmost_parent($post_id){
   $parent_id = get_post($post_id)->post_parent;

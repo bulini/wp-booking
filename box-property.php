@@ -1,4 +1,4 @@
-<div class="[ col-sm-3 col-md-3 ]">
+<div class="[ col-sm-4 col-md-4 ]">
 	<div class="[ info-card ]  hov-action-border">
 	<?php $img=wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'thumbnail', false); ?>
 		<img style="width: 100%" src="<?php echo $img[0]; ?>" />
