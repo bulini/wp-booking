@@ -81,10 +81,10 @@ $options=load_theme_options();
 					<div class="panel panel-primary hov-action-border">
 						<div class="panel-body">
 							<div class="row">
-								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 									<?php the_post_thumbnail('thumbnail');?>
 								</div>
-								<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+								<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 									<h3><a href="<?php the_permalink(); ?>" title=""><?php the_title(); ?></a> <small><?php echo $options['city']; ?></small></h3>
 									<ul class="list-inline">
 										<li><a href="#" title=""><?php echo get_post_meta( get_the_ID(), 'bookandpay_maxpeople', true); ?> persone</a></li>
