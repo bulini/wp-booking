@@ -17,6 +17,15 @@ require get_template_directory() . '/inc/template-tags.php';
  */
 require get_template_directory() . '/inc/wp-bootstrap-pagination.php';
 
+// Include the Redux theme options Framework
+if ( !class_exists( 'ReduxFramework' ) ) {
+	require_once( get_template_directory() . '/redux/framework.php' );
+}
+
+// Register all the theme options
+require_once( get_template_directory() . '/redux-config.php' );
+
+
 function get_topmost_parent($post_id){
   $parent_id = get_post($post_id)->post_parent;
   if($parent_id == 0){
