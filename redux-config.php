@@ -235,6 +235,34 @@
                 }
 
                 // ACTUAL DECLARATION OF SECTIONS
+                
+                  $this->sections[] = array(
+                    'title'         => __( 'Website', 'bootstrapwp' ),
+                    'heading'        => __( 'General information about the website', 'bootstrapwp' ),
+                    'desc'          => 'Description of this section',
+                    'icon'          => 'el-icon-cog',
+                    'submenu'       => true,
+                    'fields'        => array(
+                        array(
+                            'id'        => 'Place Name',
+                            'type'      => 'text', 
+                            'title'     => __( 'Place name', 'bootstrapwp' ),
+                            'default'   => get_bloginfo('name'),
+                            'subtitle'  => __( 'Describe your place', 'bootstrapwp' ),
+                        ),
+
+                        array(
+                            'id'        => 'Email address',
+                            'type'      => 'text', 
+                            'title'     => __( 'email address', 'bootstrapwp' ),
+                            'default'   => 'youremail@here.xxx',
+                            'subtitle'  => __( 'Subtitle Here', 'bootstrapwp' ),
+                        ),
+
+                    ),
+                );
+                
+                
                 $this->sections[] = array(
                     'title'  => __( 'Home Settings', 'redux-framework-demo' ),
                     'desc'   => __( 'Redux Framework was created with the developer in mind. It allows for any theme developer to have an advanced theme panel with most of the features a developer would need. For more information check out the Github repo at: <a href="https://github.com/ReduxFramework/Redux-Framework">https://github.com/ReduxFramework/Redux-Framework</a>', 'redux-framework-demo' ),
@@ -550,10 +578,35 @@
                     'type' => 'divide',
                 );
 
+				//Stylesheets 
+                $styles = array(
+                    'bootstrap_default.css' => 'Bootstrap', 
+                    'bootstrap_cerulean.css'  => 'Cerulean', 
+                    'bootstrap_cosmo.css'     => 'Cosmo', 
+                    'bootstrap_cyborg.css'    => 'Cyborg',
+                    'bootstrap_darkly.css'    => 'Darkly',
+                    'bootstrap_flatly.css'    => 'Flatly', 
+                    'bootstrap_journal.css'   => 'Journal', 
+                    'bootstrap_lumen.css'     => 'Lumen', 
+                    'bootstrap_paper.css'     => 'Paper',
+                    'bootstrap_readable.css'  => 'Readable',
+                    'bootstrap_sandstone.css' => 'Sandstone', 
+                    'bootstrap_simplex.css'   => 'Simplex', 
+                    'bootstrap_slate.css'     => 'Slate', 
+                    'bootstrap_spacelab.css'  => 'Spacelab', 
+                    'bootstrap_superhero.css' => 'Superhero', 
+                    'bootstrap_united.css'    => 'United', 
+                    'bootstrap_yeti.css'      => 'Yeti'
+                );
+				
+
+
                 $this->sections[] = array(
                     'icon'   => 'el el-cogs',
                     'title'  => __( 'General Settings', 'redux-framework-demo' ),
                     'fields' => array(
+	                    
+	                   
                         array(
                             'id'       => 'opt-layout',
                             'type'     => 'image_select',
@@ -648,23 +701,23 @@
 
                 $this->sections[] = array(
                     'icon'       => 'el el-website',
-                    'title'      => __( 'Styling Options', 'redux-framework-demo' ),
+                    'title'      => __( 'Styling Options', 'bootstrapwp' ),
                     'subsection' => true,
                     'fields'     => array(
                         array(
                             'id'       => 'opt-select-stylesheet',
                             'type'     => 'select',
-                            'title'    => __( 'Theme Stylesheet', 'redux-framework-demo' ),
-                            'subtitle' => __( 'Select your themes alternative color scheme.', 'redux-framework-demo' ),
-                            'options'  => array( 'default.css' => 'default.css', 'color1.css' => 'color1.css' ),
-                            'default'  => 'default.css',
+                            'title'    => __( 'Theme Stylesheet', 'bootstrapwp' ),
+                            'subtitle' => __( 'Select your themes alternative color scheme.', 'bootstrapwp' ),
+                            'options'  => $styles,
+                            'default'  => 'bootstrap_default.css',
                         ),
                         array(
                             'id'       => 'opt-color-background',
                             'type'     => 'color',
                             'output'   => array( '.site-title' ),
-                            'title'    => __( 'Body Background Color', 'redux-framework-demo' ),
-                            'subtitle' => __( 'Pick a background color for the theme (default: #fff).', 'redux-framework-demo' ),
+                            'title'    => __( 'Body Background Color', 'bootstrapwp' ),
+                            'subtitle' => __( 'Pick a background color for the theme (default: #fff).', 'bootstrapwp' ),
                             'default'  => '#FFFFFF',
                             'validate' => 'color',
                         ),
@@ -672,15 +725,15 @@
                             'id'       => 'opt-background',
                             'type'     => 'background',
                             'output'   => array( 'body' ),
-                            'title'    => __( 'Body Background', 'redux-framework-demo' ),
-                            'subtitle' => __( 'Body background with image, color, etc.', 'redux-framework-demo' ),
-                            //'default'   => '#FFFFFF',
+                            'title'    => __( 'Body Background', 'bootstrapwp' ),
+                            'subtitle' => __( 'Body background with image, color, etc.', 'bootstrapwp' ),
+                            'default'   => '#FFFFFF',
                         ),
                         array(
                             'id'       => 'opt-color-footer',
                             'type'     => 'color',
                             'title'    => __( 'Footer Background Color', 'redux-framework-demo' ),
-                            'subtitle' => __( 'Pick a background color for the footer (default: #dd9933).', 'redux-framework-demo' ),
+                            'subtitle' => __( 'Pick a background color for the footer (default: #dd9933).', 'bootstrapwp' ),
                             'default'  => '#dd9933',
                             'validate' => 'color',
                         ),
@@ -690,7 +743,7 @@
                             'title'    => __( 'Color RGBA', 'redux-framework-demo' ),
                             'subtitle' => __( 'Gives you the RGBA color.', 'redux-framework-demo' ),
                             'default'  => array(
-                                'color' => '#7e33dd',
+                                'color' => '#fff',
                                 'alpha' => '.8'
                             ),
                             'output'   => array( 'body' ),
@@ -1667,8 +1720,8 @@
                     //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                     'allow_sub_menu'       => true,
                     // Show the sections below the admin menu item or not
-                    'menu_title'           => __( 'Sample Options', 'redux-framework-demo' ),
-                    'page_title'           => __( 'Sample Options', 'redux-framework-demo' ),
+                    'menu_title'           => __( 'Theme Options', 'redux-framework-demo' ),
+                    'page_title'           => __( 'Theme Options', 'redux-framework-demo' ),
                     // You will need to generate a Google API key to use this feature.
                     // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
                     'google_api_key'       => '',

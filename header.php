@@ -1,5 +1,8 @@
 <?php 
 $options=load_theme_options();
+global $bswp_options;
+//echo 'ciaone'. bswp_option("css_style"); die();
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

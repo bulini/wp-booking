@@ -290,9 +290,12 @@ if ( !function_exists('fb_AddThumbColumn') && function_exists('add_theme_support
 	function theme_setup() {
 		//all Styles
 		$options=load_theme_options();
-		
 		//wp_enqueue_style( 'theme', get_template_directory_uri().'/css/customized/'.$options['css_select'].'.css');
-		wp_enqueue_style( 'theme', get_template_directory_uri().'/css/theme.css');
+
+		
+		//wp_enqueue_style( 'theme', get_template_directory_uri().'/css/theme.css');
+
+		wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/assets/css/customized/'. bswp_option('css_style', 'bootstrap_lumen.css'), array(), '3.3.0', 'all' );
 		wp_enqueue_style( 'carousel', get_template_directory_uri().'/carousel.css');
 		wp_enqueue_style( 'flexslider', get_template_directory_uri().'/assets/css/flexslider.css');
 		wp_enqueue_style( 'calendar', get_template_directory_uri().'/css/fullcalendar.css');				

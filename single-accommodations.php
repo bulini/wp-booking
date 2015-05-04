@@ -140,7 +140,7 @@ $options=load_theme_options();
 						  
 						  <div id="myTabContent" class="tab-content">
 							<div class="tab-pane fade in active" id="home">
-								<div class="container white">
+								<div class="white">
 								<h3>Descrizione</h3>
 									<?php the_content(); ?>
 									<hr />
@@ -150,7 +150,7 @@ $options=load_theme_options();
 								</div>
 							 
 							<div class="tab-pane fade" id="profile">
-								<div class="container white">
+								<div class="white">
 									<?php echo prices_table($post->ID); ?>
 								</div>
 							</div>

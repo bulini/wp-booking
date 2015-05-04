@@ -2,10 +2,7 @@
 //update_option('siteurl','http://testing.dev/wpsendit_227');
 //update_option('home','http://testing.dev/wpsendit_227');
 
-include('libs/metaboxes/accommodation.php');
 
-include('libs/theme-customization.php');
-include('libs/theme-init.php');
 
 /**
  * Custom template tags for this theme.
@@ -23,7 +20,20 @@ if ( !class_exists( 'ReduxFramework' ) ) {
 }
 
 // Register all the theme options
-require_once( get_template_directory() . '/redux-config.php' );
+
+//require_once( get_template_directory() . '/redux-config.php' );
+require_once( get_template_directory() . '/redux-theme-config.php' );
+
+
+
+// Theme options functions
+require_once( get_template_directory() . '/inc/bswp-options.php' );
+
+
+include('libs/metaboxes/accommodation.php');
+
+include('libs/theme-customization.php');
+include('libs/theme-init.php');
 
 
 function get_topmost_parent($post_id){
