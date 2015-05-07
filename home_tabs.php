@@ -16,7 +16,7 @@ $options=load_theme_options();
 			</div>												
 	</div>
 	 
-	<div class="tab-pane fade" id="zone">
+	<div class="tab-pane fade in" id="zone">
 
 		<h3><?php echo $options['city-name']; ?></h3>
 		<?php $terms = get_terms("areas");
@@ -31,10 +31,10 @@ $options=load_theme_options();
 					<p><?php echo term_description($term->term_id,'areas');?></p>
 					<?php echo get_types(); ?>
 				</div>
-	
+			<hr class="hr-sm">	
 			</div>
 			<!-- /ITEM-->
-			<hr class="hr-sm">
+
 		<?php    }
 		 }
 		?>	
