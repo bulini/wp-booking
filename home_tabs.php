@@ -14,36 +14,33 @@ $options=load_theme_options();
 					<h3><?php bloginfo('description'); ?></h3>				
 				</div>
 			</div>												
-
 	</div>
 	 
 	<div class="tab-pane fade" id="zone">
-		<div class="container white">
+
 		<h3><?php echo $options['city-name']; ?></h3>
 		<?php $terms = get_terms("areas");
 		 	if ( !empty( $terms ) && !is_wp_error( $terms ) ){
 		 		foreach ( $terms as $term ) { ?>
 		
 		<!-- ITEM-->
-		<div class="row hov-action-border ">
+			<div class="row hov-action-border ">
+		
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<h3><a href="<?php echo get_term_link( $term ); ?>" title=""><?php echo $term->name; ?></a> <small></small></h3>
+					<p><?php echo term_description($term->term_id,'areas');?></p>
+					<?php echo get_types(); ?>
+				</div>
 	
-			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-				<h3><a href="<?php echo get_term_link( $term ); ?>" title=""><?php echo $term->name; ?></a> <small></small></h3>
-				<p><?php echo term_description($term->term_id,'areas');?></p>
-				<?php echo get_types(); ?>
 			</div>
-			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 text-left">
-				<a class="btn btn-link" href="#" title="go" style="margin-top:20px;"><i class="icon-angle-right icon-3x text-info"></i></a>
-			</div>
-		</div>
-		<!-- /ITEM-->
-		<hr class="hr-sm">
+			<!-- /ITEM-->
+			<hr class="hr-sm">
 		<?php    }
 		 }
 		?>	
 	
 	<!-- / ITEMS-->
-		</div>
 	</div>
+
 
   </div>
