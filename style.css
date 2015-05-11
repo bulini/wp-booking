@@ -68,7 +68,7 @@ body{
 	background:#124690;
 }
 .carousel-inner{
-	max-height:400px;
+	max-height:500px;
 }
 .carousel.carousel-fade .carousel-inner >.item {
 	-webkit-transition: opacity 0.7s ease-in-out;
