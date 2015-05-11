@@ -43,6 +43,11 @@ body{
 		   -moz-linear-gradient(bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, 0)) 1 100%; 
 }
 
+.navbar.transparent.navbar-inverse .navbar-inner {
+   background: rgba(0,0,0,0.4);
+}
+
+
 .hov-action-border{
 	border: 2px solid transparent;
 }

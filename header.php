@@ -25,7 +25,7 @@ global $bswp_options;
 
 
 
-    <nav class="navbar navbar-<?php echo $options['navbar_select'];?> navbar-fixed-top" role="navigation">
+    <nav class="navbar transparent navbar-<?php echo $options['navbar_select'];?> navbar-fixed-top" role="navigation">
 		<div class="container transparent">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navcat">
