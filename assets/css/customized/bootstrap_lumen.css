@@ -4472,6 +4472,12 @@ fieldset[disabled] .navbar-default .btn-link:hover,
 fieldset[disabled] .navbar-default .btn-link:focus {
   color: #eeeeee;
 }
+
+.navbar.transparent.navbar-inverse .navbar-inner {
+   background: rgba(0,0,0,0.4);
+}
+
+
 .navbar-inverse {
   background-color: #ffffff;
   border-color: #e6e6e6;
